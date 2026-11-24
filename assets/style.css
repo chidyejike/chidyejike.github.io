@@ -7,3 +7,9 @@
 .custom-section .custom-media{display:block;max-width:720px;width:100%;height:auto;border-radius:6px;margin:24px 0}
 .custom-section .custom-links{display:flex;gap:16px;flex-wrap:wrap;margin-top:25px}
 .custom-section .custom-links a{color:var(--accent);font-weight:650}
+
+/* Keep all sidebar links reachable as custom sections are added. */
+.sidebar nav{min-height:0;overflow-y:auto;overflow-x:hidden;scrollbar-width:thin;scrollbar-color:#638d86 transparent}
+.sidebar nav a{flex-shrink:0}
+.sidebar-bottom{flex-shrink:0}
+@media(max-height:700px){.sidebar{padding-top:24px;padding-bottom:24px}.sidebar-role{margin-bottom:24px}}
