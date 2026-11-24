@@ -5,7 +5,7 @@ async function collection(type){try{const manifest=await json('data/'+type+'-ind
 let artefacts=[];
 
 /* Dynamically rendered Pages CMS sections; numeric order includes existing sections. */
-function safeHref(value){try{const u=new URL(String(value||''),location.href);return ['http:','https:','mailto:'].includes(u.protocol)?u.href:''}catch{return ''}}
+function safeHref(value){const s=String(value??'').trim();if(!s)return '';try{const u=new URL(s,location.href);return ['http:','https:','mailto:'].includes(u.protocol)?u.href:''}catch{return ''}}
 function safeMedia(value){const s=String(value||'');if(!s||s.startsWith('//')||s.includes('..'))return '';try{const u=new URL(s,location.href);return ['http:','https:'].includes(u.protocol)?u.href:''}catch{return ''}}
 function safeRichText(value){const template=document.createElement('template');template.innerHTML=String(value||'');const allowed=new Set(['P','BR','B','STRONG','I','EM','U','H3','H4','UL','OL','LI','BLOCKQUOTE','A']);const walk=node=>{for(const child of [...node.childNodes]){if(child.nodeType===8){child.remove();continue}if(child.nodeType!==1)continue;if(!allowed.has(child.tagName)){child.replaceWith(document.createTextNode(child.textContent||''));continue}for(const attr of [...child.attributes])child.removeAttribute(attr.name);if(child.tagName==='A'){const href=safeHref(nodeHref.get(child)||'');if(href){child.setAttribute('href',href);child.setAttribute('rel','noopener noreferrer')} }walk(child)}};const nodeHref=new Map();template.content.querySelectorAll('a').forEach(a=>nodeHref.set(a,a.getAttribute('href')));walk(template.content);return template.innerHTML}
 async function renderCustomSections(){
