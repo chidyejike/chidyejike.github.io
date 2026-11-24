@@ -7,6 +7,7 @@ on:
     paths:
       - 'content/projects/**'
       - 'content/artefacts/**'
+      - 'content/sections/**'
       - 'scripts/build_indexes.py'
   workflow_dispatch:
 
@@ -20,17 +21,17 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v4
 
-      - name: Generate project and artefact indexes
+      - name: Generate content indexes
         run: python3 scripts/build_indexes.py
 
       - name: Commit updated indexes if needed
         run: |
-          if git diff --quiet -- data/projects-index.json data/artefacts-index.json; then
+          if git diff --quiet -- data/projects-index.json data/artefacts-index.json data/sections-index.json; then
             echo 'Indexes already up to date.'
             exit 0
           fi
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add data/projects-index.json data/artefacts-index.json
+          git add data/projects-index.json data/artefacts-index.json data/sections-index.json
           git commit -m 'Update portfolio content indexes'
           git push
