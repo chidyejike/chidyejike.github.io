@@ -1,0 +1,61 @@
+media:
+  - name: images
+    label: Images
+    input: media/images
+    output: media/images
+    categories: [image]
+  - name: documents
+    label: Documents and spreadsheets
+    input: media/docs
+    output: media/docs
+    categories: [document, spreadsheet]
+content:
+  - name: profile
+    label: Profile and sections
+    type: file
+    path: data/profile.json
+    format: json
+    fields:
+      - {name: name, label: Display name, type: string}
+      - {name: role, label: Professional title, type: string}
+      - {name: headline, label: Homepage headline, type: string}
+      - {name: intro, label: Introduction, type: text}
+      - {name: about, label: About me, type: text}
+      - {name: sectors, label: Cross-sector experience, type: string}
+      - {name: email, label: Contact email, type: string}
+      - {name: linkedin, label: LinkedIn URL, type: string}
+      - {name: show_about, label: Show About, type: boolean}
+      - {name: show_experience, label: Show Experience, type: boolean}
+      - {name: show_projects, label: Show Projects, type: boolean}
+      - {name: show_artefacts, label: Show Artefacts, type: boolean}
+      - {name: show_contact, label: Show Contact, type: boolean}
+  - name: projects
+    label: Projects
+    type: collection
+    path: content/projects
+    format: json
+    filename: '{primary}.json'
+    view: {primary: title}
+    fields:
+      - {name: title, label: Project title, type: string, required: true}
+      - {name: category, label: Category, type: string}
+      - {name: summary, label: Summary, type: text}
+      - {name: challenge, label: Business challenge, type: text}
+      - {name: approach, label: My contribution, type: text}
+      - {name: outcome, label: Outcome, type: text}
+      - {name: featured, label: Featured, type: boolean}
+      - {name: published, label: Visible on website, type: boolean}
+  - name: artefacts
+    label: Artefact library
+    type: collection
+    path: content/artefacts
+    format: json
+    filename: '{primary}.json'
+    view: {primary: title}
+    fields:
+      - {name: title, label: Artefact name, type: string, required: true}
+      - {name: category, label: Category, type: select, options: {values: [Requirements, Process, Testing, Analysis, Other]}}
+      - {name: project, label: Related project, type: string}
+      - {name: description, label: Description, type: text}
+      - {name: file, label: Document upload, type: file, options: {media: documents}}
+      - {name: published, label: Visible on website, type: boolean}
