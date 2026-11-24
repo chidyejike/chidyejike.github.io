@@ -59,3 +59,21 @@ content:
       - {name: description, label: Description, type: text}
       - {name: file, label: Document upload, type: file, options: {media: documents}}
       - {name: published, label: Visible on website, type: boolean}
+
+  - name: custom_sections
+    label: Custom Sections
+    type: collection
+    path: content/sections
+    format: json
+    filename: '{primary}.json'
+    view: {primary: title}
+    fields:
+      - {name: title, label: Section title, type: string, required: true}
+      - {name: subtitle, label: Short introduction, type: text}
+      - {name: body, label: Main content, type: rich-text}
+      - {name: image, label: Image, type: image, options: {media: images}}
+      - {name: link_label, label: Link text, type: string}
+      - {name: link_url, label: Link URL, type: string}
+      - {name: document, label: Attached document, type: file, options: {media: documents}}
+      - {name: order, label: Display order (600 = bottom; 150 = between About and Experience), type: number}
+      - {name: published, label: Visible on website, type: boolean}
