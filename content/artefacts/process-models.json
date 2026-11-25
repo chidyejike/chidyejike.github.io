@@ -1,1 +1,7 @@
-{"title":"As-is and To-be Process Models","category":"Process","project":"LeaveSync","description":"BPMN workflow models documenting current and proposed processes.","file":"","published":true}
+{
+  "title": "As-is Process Model",
+  "category": "Process",
+  "project": "Robson Moore",
+  "description": "BPMN workflow models documenting current and proposed processes.",
+  "published": true
+}
