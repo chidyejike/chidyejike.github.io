@@ -8,7 +8,7 @@ media:
     label: Documents and spreadsheets
     input: media/docs
     output: media/docs
-    categories: [document, spreadsheet]
+    categories: [document, spreadsheet, images]
 content:
   - name: profile
     label: Profile and sections
