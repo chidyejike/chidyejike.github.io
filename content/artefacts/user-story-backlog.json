@@ -1,7 +1,8 @@
 {
   "title": "CRM TOM Use Case Diagram",
   "category": "Requirements",
-  "project": "LeaveSync",
+  "project": "Education CRM implementation",
   "description": "Prioritised user stories and BDD acceptance criteria.",
+  "file": "media/docs/3. CRM TOM Use Case Diagram.pdf",
   "published": true
 }
