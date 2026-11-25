@@ -8,7 +8,7 @@ media:
     label: Documents and spreadsheets
     input: media/docs
     output: media/docs
-    categories: [document, spreadsheet, images]
+    categories: [document, spreadsheet, image]
 content:
   - name: profile
     label: Profile and sections
@@ -57,7 +57,7 @@ content:
       - {name: category, label: Category, type: select, options: {values: [Requirements, Process, Testing, Analysis, Other]}}
       - {name: project, label: Related project, type: string}
       - {name: description, label: Description, type: text}
-      - {name: file, label: Document upload, type: file, options: {media: documents, images}}
+      - {name: file, label: Document upload, type: file, options: {media: documents, image}}
       - {name: published, label: Visible on website, type: boolean}
 
   - name: custom_sections
