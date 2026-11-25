@@ -1,1 +1,7 @@
-{"title":"Requirements Traceability Matrix","category":"Requirements","project":"LeaveSync","description":"Example matrix linking requirements to user stories, acceptance criteria and validation.","file":"","published":true}
+{
+  "title": "Requirements Catalogue",
+  "category": "Requirements",
+  "project": "Education CRM implementation",
+  "description": "Example matrix linking requirements to user stories, and acceptance criteria.",
+  "published": true
+}
