@@ -1,10 +1,10 @@
 {
-  "title": "OSHA",
-  "category": "business transformation",
-  "summary": "Improving membership database",
-  "challenge": "inadequate record keeping",
-  "approach": "clarity and organised records",
-  "outcome": "reduced errors",
+  "title": "OSHAssociation",
+  "category": "Business transformation",
+  "summary": "Improving membership database and general process improvement activities across several departments.",
+  "challenge": "Inadequate record keeping and inefficient or disjointed processes.",
+  "approach": "Situation analysis, root cause analysis, stakeholder engagement, AS-IS and TO-BE definition, Training.",
+  "outcome": "Reduced data entry errors through improved processes, and clarity and standard operating procedures across internal processes.",
   "featured": true,
   "published": true
 }
