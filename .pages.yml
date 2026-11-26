@@ -43,6 +43,7 @@ content:
       - {name: challenge, label: Business challenge, type: text}
       - {name: approach, label: My contribution, type: text}
       - {name: outcome, label: Outcome, type: text}
+      - {name: demo_url, label: Live Demo URL, type: string}
       - {name: featured, label: Featured, type: boolean}
       - {name: published, label: Visible on website, type: boolean}
   - name: artefacts
