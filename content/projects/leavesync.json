@@ -1,1 +1,11 @@
-{"title":"LeaveSync","category":"Business analysis portfolio project","summary":"A leave management MVP focused on business rules, approvals and team capacity.","challenge":"Make leave requests and approvals consistent and transparent.","approach":"Requirements traceability, user story backlog, business rules and as-is/to-be BPMN process models.","outcome":"Prototype artefacts for a six-week MVP plan; not represented as a live production deployment.","featured":true,"published":true}
+{
+  "title": "LeaveSync",
+  "category": "Business analysis portfolio project",
+  "summary": "A leave management MVP to support internal leave process management.",
+  "challenge": "Make leave requests and approvals consistent and transparent.",
+  "approach": "Requirements traceability, user story backlog, business rules and as-is/to-be BPMN process models.",
+  "outcome": "Prototype artefacts ",
+  "demo_url": "https://sync-my-leave.lovable.app",
+  "featured": true,
+  "published": true
+}
