@@ -1,7 +1,7 @@
 {
   "title": "LeaveSync",
   "category": "Business analysis portfolio project",
-  "summary": "A leave management MVP to support internal leave process based on business rules.",
+  "summary": "An AI assisted leave management prototype designed to support internal leave process management based on business rules.",
   "challenge": "Make leave requests and approvals consistent and transparent.",
   "approach": "Requirements traceability, user story backlog, business rules and as-is/to-be BPMN process models.",
   "outcome": "Prototype artefacts ",
